@@ -54,10 +54,6 @@
       margin: 0;
     }
 
-    .navbar .dropdown-menu {
-      list-style: none !important;
-    }
-
     .navbar > li {
       position: relative;
     }
@@ -83,6 +79,7 @@
       min-width: 160px;
       z-index: 999;
       flex-direction: column;
+      list-style: none;
     }
 
     .dropdown-menu li a {
@@ -90,10 +87,6 @@
       display: block;
       color: white;
       text-decoration: none;
-    }
-
-    .dropdown-menu li a:hover {
-      background-color: var(--nav-hover-bg);
     }
 
     .dropdown:hover .dropdown-menu {
@@ -106,11 +99,6 @@
       margin: 100px 0 10px;
     }
 
-    p {
-      text-align: center;
-      margin-bottom: 80px;
-    }
-
     .container {
       max-width: 1000px;
       margin: 40px auto;
@@ -118,16 +106,50 @@
     }
 
     .project {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
       background-color: #f3f9ff;
       border-left: 5px solid var(--nav-bg);
-      padding: 20px;
-      margin-bottom: 20px;
       border-radius: 6px;
+      margin-bottom: 20px;
+      overflow: hidden;
       transition: background-color 0.3s;
     }
 
     .project:hover {
       background-color: #e6f2ff;
+    }
+
+    .project-content {
+      flex: 1;
+      padding: 20px;
+      transition: flex 0.5s ease;
+    }
+
+    .project-image {
+      flex: 0;
+      opacity: 0;
+      transition: flex 0.5s ease, opacity 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+    }
+
+    .project-image img {
+      max-width: 100%;
+      max-height: 180px;
+      object-fit: contain;
+    }
+
+    .project:hover .project-content {
+      flex: 0.6;
+    }
+
+    .project:hover .project-image {
+      flex: 0.4;
+      opacity: 1;
     }
 
     .project h2 {
@@ -170,35 +192,63 @@
     <h1>Quantitative Analysis & Numerical Modeling Projects</h1>
 
     <div class="project">
-      <h2>Accelerated Algorithm for Solving Complex PDE Equations</h2>
-      <p>Developed a highly optimized numerical algorithm to solve complex dispersion equations in waveguide and periodic media modeling, achieving significantly faster convergence and higher accuracy.</p>
-    </div>
-    
-
-    
-    <div class="project">
-      <h2>Monte Carlo Simulation for Heat Diffusion</h2>
-      <p>Used stochastic methods to solve the 2D heat diffusion equation with high precision. Demonstrated the connection between probabilistic and deterministic PDE solvers.</p>
+      <div class="project-content">
+        <h2>Accelerated Algorithm for Solving Complex PDE Equations</h2>
+        <p>Developed a highly optimized numerical algorithm to solve complex dispersion equations in waveguide and periodic media modeling, achieving significantly faster convergence and higher accuracy.</p>
+      </div>
+      <div class="project-image">
+        <img src="project1.jpg" alt="PDE Solver Visualization">
+      </div>
     </div>
 
     <div class="project">
-      <h2>Custom Ray Tracing Package</h2>
-      <p>Packaged an efficient ray tracing code from scratch to simulate optical systems, using a modular and reusable structure for high performance and flexibility.</p>
+      <div class="project-content">
+        <h2>Monte Carlo Simulation for Heat Diffusion</h2>
+        <p>Used stochastic methods to solve the 2D heat diffusion equation with high precision. Demonstrated the connection between probabilistic and deterministic PDE solvers.</p>
+      </div>
+      <div class="project-image">
+        <img src="project2.jpg" alt="Heat Diffusion Simulation">
+      </div>
     </div>
 
     <div class="project">
-      <h2>STPV Efficiency Modeling and Optimization</h2>
-      <p>Built a full numerical simulation pipeline to compute and boost the efficiency of solar thermophotovoltaic (STPV) systems, incorporating spectral integration, emissivity tuning, and filter design.</p>
+      <div class="project-content">
+        <h2>Custom Ray Tracing Package</h2>
+        <p>Packaged an efficient ray tracing code from scratch to simulate optical systems, using a modular and reusable structure for high performance and flexibility.</p>
+      </div>
+      <div class="project-image">
+        <img src="project3.jpg" alt="Ray Tracing">
+      </div>
     </div>
 
     <div class="project">
-      <h2>Electromagnetic Wave Simulation with RCWA</h2>
-      <p>Implemented rigorous coupled-wave analysis (RCWA) to model wave propagation and reflection in photonic structures, including diffraction gratings and metasurfaces.</p>
+      <div class="project-content">
+        <h2>STPV Efficiency Modeling and Optimization</h2>
+        <p>Built a full numerical simulation pipeline to compute and boost the efficiency of solar thermophotovoltaic (STPV) systems, incorporating spectral integration, emissivity tuning, and filter design.</p>
+      </div>
+      <div class="project-image">
+        <img src="project4.jpg" alt="STPV Modeling">
+      </div>
     </div>
 
     <div class="project">
-      <h2>FDFD for Electromagnetic Propagation</h2>
-      <p>Used the finite-difference frequency-domain method (FDFD) to simulate how EM waves interact with materials, allowing design of custom optical responses in layered media.</p>
+      <div class="project-content">
+        <h2>Electromagnetic Wave Simulation with RCWA</h2>
+        <p>Implemented rigorous coupled-wave analysis (RCWA) to model wave propagation and reflection in photonic structures, including diffraction gratings and metasurfaces.</p>
+      </div>
+      <div class="project-image">
+        <img src="project5.jpg" alt="RCWA Simulation">
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-content">
+        <h2>FDFD for Electromagnetic Propagation</h2>
+        <p>Used the finite-difference frequency-domain method (FDFD) to simulate how EM waves interact with materials, allowing design of custom optical responses in layered media.</p>
+      </div>
+      <div class="project-image">
+        <img src="project6.jpg" alt="FDFD Simulation">
+      </div>
     </div>
   </div>
 
