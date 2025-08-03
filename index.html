@@ -5,112 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sina Jafari – Quantitative Analysis Projects</title>
   <style>
-  nav {
-    width: 100vw;
-    background-color: var(--nav-bg);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
+    :root {
+      --nav-bg: #007acc;
+      --nav-hover-bg: #005f99;
+    }
 
-  .navbar {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+    nav {
+      width: 100vw;
+      background-color: var(--nav-bg);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 
-  .navbar > li {
-    position: relative;
-  }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-  .navbar > li > a {
-    display: block;
-    padding: 14px 24px;  /* slightly wider */
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-    white-space: nowrap;
-  }
+    .navbar > li {
+      position: relative;
+    }
 
-  .navbar > li > a:hover,
-  .navbar > li:hover > a {
-    background-color: var(--nav-hover-bg);
-  }
+    .navbar > li > a {
+      display: block;
+      padding: 14px 24px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+    }
 
-  /* Dropdown container */
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--nav-bg);
-    min-width: 180px;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    flex-direction: column;
-    list-style: none;
-    margin: 0;
-    padding: 8px 0;
-    z-index: 999;
-  }
+    .navbar > li > a:hover,
+    .navbar > li:hover > a {
+      background-color: var(--nav-hover-bg);
+    }
 
-  /* Show dropdown on hover */
-  .dropdown:hover .dropdown-menu {
-    display: flex;
-  }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--nav-bg);
+      min-width: 180px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      flex-direction: column;
+      list-style: none;
+      margin: 0;
+      padding: 8px 0;
+      z-index: 999;
+    }
 
-  .dropdown-menu li a {
-    padding: 12px 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
+    .dropdown:hover .dropdown-menu {
+      display: flex;
+      flex-direction: column;
+    }
 
-  .dropdown-menu li a:hover {
-    background-color: var(--nav-hover-bg);
-  }
-</style>
+    .dropdown-menu li a {
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
 
-<nav>
-  <ul class="navbar">
-    <li><a href="/">Home</a></li>
-    <li class="dropdown">
-      <a href="#" aria-haspopup="true" aria-expanded="false">About ▼</a>
-      <ul class="dropdown-menu" aria-label="submenu">
-        <li><a href="/bio">Biography</a></li>
-        <li><a href="/skills">Skills</a></li>
-        <li><a href="/cv">CV</a></li>
-      </ul>
-    </li>
-    <li class="dropdown">
-      <a href="#" aria-haspopup="true" aria-expanded="false">Projects ▼</a>
-      <ul class="dropdown-menu" aria-label="submenu">
-        <li><a href="/photonics">Photonics</a></li>
-        <li><a href="/optics">Optics</a></li>
-        <li><a href="/coding">Coding</a></li>
-        <li><a href="/quant">Quantitative</a></li>
-      </ul>
-    </li>
-    <li><a href="/contact">Contact</a></li>
-  </ul>
-</nav>
+    .dropdown-menu li a:hover {
+      background-color: var(--nav-hover-bg);
+    }
 
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .project {
+      background-color: #f3f9ff;
+      border-left: 5px solid var(--nav-bg);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .project:hover {
+      background-color: #e6f2ff;
+    }
+
+    .project h2 {
+      margin-top: 0;
+      color: #1a2e3f;
+    }
+
+    .project p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
     <ul class="navbar">
       <li><a href="/">Home</a></li>
       <li class="dropdown">
-        <a href="#">About</a>
-        <ul class="dropdown-menu">
+        <a href="#" aria-haspopup="true" aria-expanded="false">About ▼</a>
+        <ul class="dropdown-menu" aria-label="submenu">
           <li><a href="/bio">Biography</a></li>
           <li><a href="/skills">Skills</a></li>
           <li><a href="/cv">CV</a></li>
         </ul>
       </li>
       <li class="dropdown">
-        <a href="#">Projects</a>
-        <ul class="dropdown-menu">
+        <a href="#" aria-haspopup="true" aria-expanded="false">Projects ▼</a>
+        <ul class="dropdown-menu" aria-label="submenu">
           <li><a href="/photonics">Photonics</a></li>
           <li><a href="/optics">Optics</a></li>
           <li><a href="/coding">Coding</a></li>
@@ -153,7 +173,7 @@
       <h2>FDFD for Electromagnetic Propagation</h2>
       <p>Used the finite-difference frequency-domain method (FDFD) to simulate how EM waves interact with materials, allowing design of custom optical responses in layered media.</p>
     </div>
-
   </div>
+
 </body>
 </html>
