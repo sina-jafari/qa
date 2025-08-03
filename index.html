@@ -6,8 +6,24 @@
   <title>Sina Jafari – Quantitative Analysis Projects</title>
   <style>
     :root {
+      --bg-color: #fdfdfd;
+      --text-color: #333;
       --nav-bg: #007acc;
       --nav-hover-bg: #005f99;
+      --accent-color: #2c3e50;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-size: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
     }
 
     nav {
@@ -99,14 +115,6 @@
       max-width: 1000px;
       margin: 40px auto;
       padding: 20px;
-      font-family: Arial, sans-serif;
-      color: #333;
-    }
-
-    h1 {
-      color: #2c3e50;
-      text-align: center;
-      margin-bottom: 40px;
     }
 
     .project {
@@ -139,20 +147,19 @@
     <ul class="navbar">
       <li><a href="/">Home</a></li>
       <li class="dropdown">
-        <a href="#" aria-haspopup="true" aria-expanded="false">About ▼</a>
-        <ul class="dropdown-menu" aria-label="submenu">
+        <a href="#">About</a>
+        <ul class="dropdown-menu">
           <li><a href="/bio">Biography</a></li>
           <li><a href="/skills">Skills</a></li>
           <li><a href="/cv">CV</a></li>
         </ul>
       </li>
       <li class="dropdown">
-        <a href="#" aria-haspopup="true" aria-expanded="false">Projects ▼</a>
-        <ul class="dropdown-menu" aria-label="submenu">
+        <a href="#">Projects</a>
+        <ul class="dropdown-menu">
           <li><a href="/photonics">Photonics</a></li>
-          <li><a href="/optics">Optics</a></li>
+          <li><a href="/qa">Quantitative Analysis</a></li>
           <li><a href="/coding">Coding</a></li>
-          <li><a href="/quant">Quantitative</a></li>
         </ul>
       </li>
       <li><a href="/contact">Contact</a></li>
